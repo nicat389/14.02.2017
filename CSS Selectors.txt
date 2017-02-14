@@ -1,0 +1,129 @@
+﻿														CSS Selectors
+CSS3-də 4 fərqli kombinator var:
+1)Descent selector(space)
+2)Child selector(>)
+3)Adjacent sibling selector(+)
+4)General sibling selector(~)
+
+Descent selectors istənilən cür tagları, hətta hər hansı digər tag daxilində yazılsa belə seçir və bizə ona CSS-də təsir etmək imkanı yaradır. İşarələmə 
+quruluşunun altındaki üç səviyyəyə baxır.
+
+Məsələn:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Welcome to Nicat's place</title>
+    <style>
+    .main h3{
+        color:red;
+    }
+    
+    </style>
+</head>
+<body>
+ <div class="main">
+     <h3>ADNSU</h3>
+     <h3>ADNA</h3>
+     <h3>AZII</h3>
+     <h3>ITIF</h3>
+     <span> <h3>6777.4</h3> </span>
+     
+     </div>   
+</body>
+</html>
+
+
+Child selector isə bizə yalnız hər hansı tag daxilində olmayan, azad şəkildə ifadə olunmuş taglara təsir etmək imkanı verir. Yalnızca işarələmə 
+quruluşunun altındaki bir səviyyəyə baxır, daha çoxuna baxmır.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Welcome to Nicat's place</title>
+    <style>
+    .main>h3{
+        color:red;
+    }
+    
+    </style>
+</head>
+<body>
+ <div class="main">
+     <h3>ADNSU</h3>
+     <h3>ADNA</h3>
+     <h3>AZII</h3>
+     <h3>ITIF</h3>
+     <span> <h3>6777.4</h3> </span>
+     
+     </div>   
+</body>
+</html>
+
+
+
+Adjacent sibling selector, məsələn göstərdiyimiz div-in içərisində p tagına təsir etmək istəyiriksə, Adjacent sibling selector div-dən yalnız sonrakı bir p tagına
+təsir göstərəcək.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Welcome to Nicat's place</title>
+    <style>
+    .main+h3{
+        color:red;
+    }
+    
+    </style>
+</head>
+<body>
+ <div class="main">
+     <h3>ADNSU</h3>
+     <h3>ADNA</h3>
+     <h3>AZII</h3>
+     <h3>ITIF</h3>
+
+     
+     </div>   
+	 
+	 <h3>6777.4</h3> 
+	 
+</body>
+</html>
+
+General sibling selector Adjacent sibling selector-a oxşardır. Aradakı fərq məsələn, Adjacent sibling selector yalnız lazım olan yalnızca div-dən sonrakı bir p 
+tagına təsir göstərirdisə, General sibling selector	div-dən sonrakı bütün p taglarına təsir göstərəcək.
+
+Məsələn:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Welcome to Nicat's place</title>
+    <style>
+    .main~h3{
+        color:red;
+    }
+    
+    </style>
+</head>
+<body>
+ <div class="main">
+     <h3>ADNSU</h3>
+     <h3>ADNA</h3>
+     <h3>AZII</h3>
+     <h3>ITIF</h3>
+     
+     
+     </div>   
+
+    <h3>6777.4</h3> 
+	 <h3>ITIF</h3>
+
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+﻿																	nth-child
+nth-child hər hansı tagın daxilində onun neçənci övladına müraciət etdiyimizi bildirmək üçün istifadə olunur. Məsələn, sadəlik üçün ul və li taglarına baxaq.
+CSS-də li:nth-child(odd){} versək ancaq tək saylı li taglarına təsir göstərəcək. li:nth-child(even){} isə cüt saylı lig taglarına təsir göstərəcək.	nth-child()
+içərisinə rəqəm də verə bilərik. Məsələn,li:nth-child(3){}. Başqa bir variant isə li:nth-child(2n){}, li:nth-child(3n){}, li:nth-child(3n+3){} və s.
+Burada n 0-dan başlayaraq tagın axırıncı sayına kimi nth-child-a qiymətlər verir və həmin taglara CSS vasitəsilə təsir etməyimizə kömək edir.
+Məsələn:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Welcome to Nicat's place</title>
+    <style>
+   
+   ul{
+       
+  list-style: none;
+   }
+
+li:nth-child(even) {
+    background: red;
+}
+    
+    </style>
+</head>
+<body>
+ <ul>
+     <li>ADNSU</li>
+     <li>ADNA</li>
+     <li>AZII</li>
+     <li>ITIF</li>
+     <li>6777</li>
+ </ul>
+
+</body>
+</html>								
